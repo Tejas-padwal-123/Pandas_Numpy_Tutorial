@@ -1,0 +1,27 @@
+How to create an empty and a full NumPy array?
+--> use np.empty((2,2)) will create array of shape 2,2 and will have a random values as its initial values,
+    use np.full((2,3), 5)will create array of shape 2,3 and will full with 5 value elemenet.
+
+Create a Numpy array filled with all zeros and ones| Python
+--> use np.zeros((2,2)) will create array of shape 2,2 array will be full with 0.
+    use np.ones((2,2))  will create array of shape 2,2 array will be full with 1.
+
+Check whether a Numpy array contains a specified row
+--> import numpy
+    arr = np.array([[1,2,3,4],
+                   [5,6,7,8]
+                   [9,10,11,12]])
+    print([1,2,3,4] in arr.tolist())
+    print([3,6,7,9] in arr.tolist())
+    here tolist() will convert whole arry in list of list, then by using just in parameter we are cheking list is present in list of list.
+
+How to Remove rows in Numpy array that contains non-numeric values?
+-->n_arr = np.array([[10.5, 22.5, 3.8],
+                  [41, np.nan, np.nan]])
+   print("\nRemove all rows containing non-numeric elements")
+   print(n_arr[~np.isnan(n_arr).any(axis=1)])
+   here bitwisw NOT(~) abd np.isnan are being used on n_arr by horizontal axis to chek and remove rows. for columnwise use axis = 0
+
+
+
+
